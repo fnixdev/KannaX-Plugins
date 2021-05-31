@@ -12,7 +12,6 @@ API = "http://ws.audioscrobbler.com/2.0"
 
 # In Case Song Does't have any Album Art.
 PIC_URL = [
-    "https://i.imgur.com/w0zJLyo.png",
     "https://i.imgur.com/G7MfRm6.png",
     "https://i.imgur.com/g4Lv2gR.png",
     "https://i.imgur.com/DaWiyvb.png",
