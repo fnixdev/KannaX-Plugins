@@ -47,7 +47,7 @@ async def device_recovery(message: Message):
 @kannax.on_cmd("magisk$", about={"header": "Get Latest Magisk Zip and Manager"})
 async def magisk_(message: Message):
     """Get Latest MAGISK"""
-    magisk_repo = "https://raw.githubusercontent.com/topjohnwu/magisk_files/"
+    magisk_repo = "https://raw.githubusercontent.com/topjohnwu/magisk-files/"
     magisk_dict = {
         "⦁ 𝗦𝘁𝗮𝗯𝗹𝗲": magisk_repo + "master/stable.json",
         "⦁ 𝗕𝗲𝘁𝗮": magisk_repo + "master/beta.json",
