@@ -65,7 +65,6 @@ async def magisk_(message: Message):
 
         releases += (
             f'{name}: [ZIP v{data["magisk"]["version"]}]({data["magisk"]["link"]}) | '
-            f'[Uninstaller]({data["uninstaller"]["link"]})\n'
         )
 
     await message.edit(releases, disable_web_page_preview=True)
