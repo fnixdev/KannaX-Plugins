@@ -1,7 +1,6 @@
 cairosvg
 coffeehouse
 colour
-deezloader
 emoji-country-flag
 google
 glitch-this
