@@ -18,3 +18,5 @@ newspaper3k
 pydub
 pyfiglet
 pylast
+pytgcalls
+ffmpeg-python
