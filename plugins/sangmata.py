@@ -19,13 +19,13 @@ async def sangmata_(message: Message):
     """Get User's Updated previous Names and Usernames"""
     replied = message.reply_to_message
     if not replied:
-        await message.err("```Reply to get Name and Username History...```", del_in=5)
+        await message.err("```Responda para obter historico de username...```", del_in=5)
         return
     user = replied.from_user.id
     chat = "@Sangmatainfo_bot"
-    await message.edit("```Getting info, Wait plox ...```")
+    await message.edit("```Obtendo informações, aguarde...```")
     msgs = []
-    ERROR_MSG = "For your kind information, you blocked @Sangmatainfo_bot, Unblock it"
+    ERROR_MSG = "primeiro, desbloqueie @Sangmatainfo_bot."
     try:
         async with kannax.conversation(chat) as conv:
             try:
@@ -38,18 +38,18 @@ async def sangmata_(message: Message):
             msgs.append(await conv.get_response(timeout=3, mark_read=True))
     except StopConversation:
         pass
-    name = "Name History"
-    username = "Username History"
+    name = "Historico de Nomes"
+    username = "Historico de Usernames"
     for msg in msgs:
         if "-u" in message.flags:
             if msg.text.startswith("No records found"):
-                await message.edit("```User never changed his Username...```", del_in=5)
+                await message.edit("```Usuario nunca mudou username...```", del_in=5)
                 return
             if msg.text.startswith(username):
                 await message.edit(f"`{msg.text}`")
         else:
             if msg.text.startswith("No records found"):
-                await message.edit("```User never changed his Name...```", del_in=5)
+                await message.edit("```Usuario nunca mudou nome...```", del_in=5)
                 return
             if msg.text.startswith(name):
                 await message.edit(f"`{msg.text}`")
