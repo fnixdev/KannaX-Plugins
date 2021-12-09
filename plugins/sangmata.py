@@ -38,8 +38,8 @@ async def sangmata_(message: Message):
             msgs.append(await conv.get_response(timeout=3, mark_read=True))
     except StopConversation:
         pass
-    name = "Historico de Nomes"
-    username = "Historico de Usernames"
+    name = "Name History"
+    username = "Username History"
     for msg in msgs:
         if "-u" in message.flags:
             if msg.text.startswith("No records found"):
